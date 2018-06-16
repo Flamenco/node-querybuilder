@@ -221,7 +221,7 @@ pool.get_connection(qb => {
 **_NOTE:_** The compatibility portions of these tables are subject to change as features and drivers are written!
 
 ## Chainable Methods
-Chainable methods can be called as many times as you'd like in any order you like. The final query will not be built and executed until one of the [execution methods](#execution-methods), like `get()`,  are callled. As the name implies, the methods can be chained together indefinitely but this is not required. You definitely call them individually with the same effect at execution time.
+Chainable methods can be called as many times as you'd like in any order you like. The final query will not be built and executed until one of the [execution methods](#execution-methods), like `get()`,  are called. As the name implies, the methods can be chained together indefinitely but this is not required. You definitely call them individually with the same effect at execution time.
 
 API Method                            | SQL Command | MySQL    | MSSQL | Oracle | SQLite | Postgres | Mongo
 :------------------------------------ | :---------- | :------: | :---: | :----: | :----: | :------: | :---:

@@ -579,7 +579,7 @@ value         | Mixed         | N/A      | When the first parameter is a field n
 escape        | Boolean       | TRUE     | TRUE: Escape field names and values; FALSE: No escaping
 
 #### .where(field[,value[,escape]])
-This method can be called in many different ways depending on your style and the format of the data that you have at the time of calling it. For standard SQL, all clauses will be joined with 'AND'—if you need to join clauses by 'OR', please us `.or_where()`. By default, all values and field names passed to this function will be escaped automatically to produce safer queries. You can turn this off by passing **false** into the third parameter.
+This method can be called in many different ways depending on your style and the format of the data that you have at the time of calling it. For standard SQL, all clauses will be joined with 'AND'—if you need to join clauses by 'OR', please use `.or_where()`. By default, all values and field names passed to this function will be escaped automatically to produce safer queries. You can turn this off by passing **false** into the third parameter.
 
 If a valid field name is passed in the first parameter, you can pass an array the second parameter and the call will be treated as a [.where_in()](#where_in).
 

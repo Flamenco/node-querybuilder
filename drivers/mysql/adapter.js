@@ -34,7 +34,17 @@ class Adapter extends QueryExec {
     // it's just good practice to go ahead and do this in case things change.
     // ****************************************************************************
     map_connection_settings() {
+
+      const fns = {}
+      Object.keys(this._connection_settings).forEach(it=>{
+        if (typeof this._connection_settings[it] === 'function'){
+          fns[it] = this._connection_settings[it]
+        }
+      })
+
         const settings = JSON.parse(JSON.stringify(this._connection_settings));
+
+      Object.assign(settings, fns)
 
         this._connection_settings = {
             host: settings.host,

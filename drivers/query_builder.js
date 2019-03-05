@@ -1082,7 +1082,9 @@ class GenericQueryBuilder {
 
            if (v instanceof Date) v = v.toString();
 
-           if (!/^(number|string|boolean)$/.test(typeof v) && v !== null) {
+           if (v instanceof Buffer) {
+           }
+           else if (!/^(number|string|boolean)$/.test(typeof v) && v !== null) {
                throw new Error("set(): Invalid value provided! (provided: " + v + " (type: " + (typeof v) + ")");
            }
            else if (typeof v === 'number' && (v === Infinity || v !== +v)) {

@@ -97,7 +97,7 @@ class QueryExec extends QueryBuilder {
             cb = on_dupe;
             on_dupe = null;
         }
-        const sql = this._insert_ignore(table, set, on_dupe);
+        const sql = this._insert(table, set, true, on_dupe);
         this.reset_query(sql);
         this._exec(sql,cb);
     }
